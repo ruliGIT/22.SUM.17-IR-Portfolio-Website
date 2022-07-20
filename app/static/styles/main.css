@@ -178,8 +178,8 @@ ul a:hover {
 .resume {
   text-decoration: underline;
   border: none;
-  background-color: #FF9F9F;
-  color: #434975;
+  background-color: #434975;
+  color: white;
   padding: 5px 10px;
   text-align: center;
   border-radius: 10px;
@@ -190,7 +190,8 @@ ul a:hover {
 
 .resume:hover {
     cursor: pointer;
-    color:#DCD6F7;
+    color:#434975;
+    background-color: #F4EEFF;
     outline: #434975 solid 2px;
 }
 
