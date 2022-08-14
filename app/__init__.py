@@ -1,4 +1,5 @@
 import os
+from tkinter import N
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
 from peewee import *
@@ -35,8 +36,9 @@ mydb.connect()
 mydb.create_tables([TimelinePost])
 
 class Proj:
-    def __init__(self, name, descrip, git, demo) -> None:
+    def __init__(self, name, stack, descrip, git, demo) -> None:
         self.name = name
+        self.stack = stack
         self.descrip = descrip
         self.git = git
         self.demo = demo
@@ -61,20 +63,35 @@ class Post:
 def index():
 
     projs = [
-        Proj("Proj 1", "Description of my proj 1!",
-             "https://google.com/", "https://github.com/"),
-        Proj("Proj 2", "This is my proj 2!!",
-             "https://github.com/", "https://github.com/"),
-        Proj("Proj 3", "Description of my proj 3",
-             "https://github.com/", "https://github.com/"),
-        Proj("Proj 4", "Description of my proj 4",
-             "https://github.com/", "https://github.com/")
+        Proj(
+            "Cryptocurrency Details and News", 
+            "Tech Stack: JavaScript, React, Redux Toolkit, Chart.js, and Node.js", 
+            "Built a React application that displays present data and news of the top 100 crypto currencies",
+            "https://github.com/ruliGIT/Top100crypto", "https://sage-100-cryptos-ir.netlify.app/"),
+        Proj(
+            "Diabetes Predictor", 
+            "Tech Stack: Python, Pandas, Numpy, Scikit-Learn, Streamlit", 
+            "Built a machine learning model that predicts a users diabetes diagnosis",
+            "https://github.com/ruliGIT/diabetes-prediction", "https://share.streamlit.io/ruligit/diabetes-prediction/main/streamlitApp.py"),
+        Proj(
+            "Queen’s University CISC 226: Game Design Course Project", 
+            "Tech Stack: Unity, C#", 
+            "Developed a PacMan inspired rogue-like game using the Unity Game Engine",
+            "https://github.com/CISC-226-22W/gpd-gdp-23/tree/VideoSceneIsaac", "https://creative.caslab.queensu.ca/~GDP23/"),
+        Proj(
+            "This Portfolio Website!", 
+            "Tech Stack:  Python, Flask, Jinja, MySQL, Docker", 
+            "Portfolio website template using Python, Flask, Jinja, MySQL, Nginx, and unittest",
+            "https://github.com/ruliGIT/pe-portfolio", "https://ishami-ru.duckdns.org/")
     ]
 
     exps = [
-        Exp("Experience 1", ["point 1", "point 2", "point 3"]),
-        Exp("Experience 2", ["point 1", "point 2", "point 3"]),
-        Exp("Experience 3", ["point 1", "point 2", "point 3"])
+        Exp("Production Engineering Fellow (Meta)", 
+        ["Major League Hacking", "Completed 12-weeks of structured curriculum-based learning covering core Production Engineering topics and built this website!", "Jun 2022 – Aug 2022"]),
+        Exp("Research Volunteer ", 
+        ["Queen’s MIB Laboratory", "Working towards finding more advanced computational methods to analyze cancer mutation data by exploring different machine learning techniques", "Jun 2022 – present"]),
+        Exp("General Member", 
+        ["Queen’s Web Development Club", "Learned fundamentals of web development and modern web development tools (React.js, Node.js, Figma) and worked on team project using Google Maps JavaScript API", "Sept 2021 – Apr 2022"])
     ]
 
     pols = [
