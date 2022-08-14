@@ -334,9 +334,8 @@ ul a:hover {
   margin-left: 30%;
   margin-right: 30%;
   border-radius: 20px;
-  background: #F4EEFF;
+  background: #434975;
   padding: 30px;
-  color: #434975;
   box-shadow: #000;
 }
 
@@ -358,6 +357,13 @@ ul a:hover {
 .row-cols-1 {
   margin-left: 30%;
   margin-right: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 3 1;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding: 30px;
 }
 
 /* For more than 1 polaroid*/
