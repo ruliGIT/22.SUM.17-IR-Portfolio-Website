@@ -87,11 +87,11 @@ def index():
 
     exps = [
         Exp("Production Engineering Fellow (Meta)", 
-        ["Major League Hacking", "Completed 12-weeks of structured curriculum-based learning covering core Production Engineering topics and built this website!", "Jun 2022 – Aug 2022"]),
-        Exp("Research Volunteer ", 
-        ["Queen’s MIB Laboratory", "Working towards finding more advanced computational methods to analyze cancer mutation data by exploring different machine learning techniques", "Jun 2022 – present"]),
-        Exp("General Member", 
-        ["Queen’s Web Development Club", "Learned fundamentals of web development and modern web development tools (React.js, Node.js, Figma) and worked on team project using Google Maps JavaScript API", "Sept 2021 – Apr 2022"])
+        ["- Major League Hacking", "- Completed 12-weeks of structured curriculum-based learning covering core Production Engineering topics and built this website!", "Jun 2022 – Aug 2022"]),
+        Exp("- Research Volunteer ", 
+        ["- Queen’s MIB Laboratory", "- Working towards finding more advanced computational methods to analyze cancer mutation data by exploring different machine learning techniques", "Jun 2022 – present"]),
+        Exp("- General Member", 
+        ["- Queen’s Web Development Club", "- Learned fundamentals of web development and modern web development tools (React.js, Node.js, Figma) and worked on team project using Google Maps JavaScript API", "Sept 2021 – Apr 2022"])
     ]
 
     pols = [
