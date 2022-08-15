@@ -1,5 +1,5 @@
 import os
-from tkinter import N
+#from tkinter import N
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
 from peewee import *
@@ -147,5 +147,3 @@ def get_time_line_post():
             model_to_dict(p) for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())
         ]
     }
-
-
