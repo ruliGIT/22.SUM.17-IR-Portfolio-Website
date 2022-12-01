@@ -24,7 +24,6 @@ services:
     restart: always
     environment:
       - CERTBOT_EMAIL=ishami11@live.com
-      - RENEWAL_INTERVAL=8d
     ports:
       - 80:80
       - 443:443
@@ -33,7 +32,7 @@ services:
       - ./user_conf.d:/etc/nginx/user_conf.d
     depends_on:
       - myportfolio
-      
+
 volumes:
   mydatabase:
   nginx_secrets:
