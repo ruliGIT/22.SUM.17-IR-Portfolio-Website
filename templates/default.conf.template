@@ -1,16 +1,1 @@
-server {
-    listen 80;
-    server_name ishami-ru.duckdns.org;
-
-    if ($host = ishami-ru.duckdns.org) {
-        return 301 https://$host$request_uri;
-    }
-}
-
-server {
-    listen 443 ssl;
-    server_name ishami-ru.duckdns.org;
-
-    location / {
-        proxy_pass http://myportfolio:5000/;
-    }
+listen ${NGINX_PORT};
